@@ -12,31 +12,73 @@
 <title>Document</title>
 </head>
 <body>
-    <!--------------------------------Nav Bar----------------------------------------->
+    <!------------- For screenreaders/keyboard users (Skip Nav) --------------------->
     <a href="#start-of-content" class="sr-only sr-only-focusable">
       Skip to content
     </a>
     
-    <!--------------------------------Nav Bar----------------------------------------->
+    <!----======================= Nav Bar ==========================------>
     <nav>
-    <ul>
-        <li><a href="#" target="_blank" role="button" aria-pressed="false">Government</a></li>
-        <li><a href="#" target="_blank" role="button" aria-pressed="false">Departments</a></li>
-        <li><img src="Images/Pelican.svg" alt="pelican logo"></li>
-        <li><a href="#" target="_blank" role="button" aria-pressed="false">Community</a></li>
-        <li><a href="#" target="_blank" role="button" aria-pressed="false">How Do I?</a></li>
-    </ul>
+    <!--dropdown 1-->
+    <div class="dropdown">
+          <button class="dropbtn">Government
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://www.naplesgov.com/citymanager/page/public-meetings-agendas">Public Meetings / Agendas</a>
+            <a href="https://www.naplesgov.com/bc">Boards and Committees</a>
+            <a href="https://www.naplesgov.com/citycouncil">City Council & Mayor</a>
+            <a href="https://www.naplesgov.com/projects">Projects</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Departments
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://www.naplesgov.com/naturalresources">Natural Resources</a>
+            <a href="https://www.naplesgov.com/parksrec">Parks & Recreation</a>
+            <a href="https://www.naplesgov.com/planning">Planning</a>
+            <a href="https://www.naplesgov.com/police">Police</a>
+          </div>
+        </div>
+
+        <img src="Images/Pelican.svg" alt="pelican logo" class="my-logo">
+
+        <div class="dropdown">
+          <button class="dropbtn">Community
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://g.naplesgov.com/cityofnaplesgis2/">City Maps</a>
+            <a href="https://www.naplesgov.com/parksrec/page/naples-pier">Naples Pier</a>
+            <a href="https://www.naplesgov.com/parksites">Parks</a>
+            <a href="https://www.naplesgov.com/community/page/cycling-naples">Cycling in Naples</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">How Do I?
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://www.naplesgov.com/hr/page/job-opportunities">Job Opportunities</a>
+            <a href="https://www.naplesgov.com/contact">Contact the City</a>
+            <a href="https://cityview2.iharriscomputer.com/cityofnaplesflorida">Building Permit</a>
+            <a href="https://www.naplesgov.com/codeenforcement">Report a Code Violation</a>
+          </div>
+        </div>
     </nav>
 
+    <div id="start-of-content" class="sr-only"></div>
     <!--------------------------------Hero Image----------------------------------------->
     <div class="hero-image">
-    <h1>Welcome to</h1>
-    <h2> -------------- the City Of -------------- </h2>
-    <h1>Naples</h1>
+    <h1>Welcome to<br><span> -------------- the City Of -------------- </span><br>Naples</h1>
     </div>
 
     <!--------------------------------Icons & Text----------------------------------------->
-    <h2 class="main-title">What's Happening In Our Community?</h2>
+    <h2>What's Happening In Our Community?</h2>
 
     <div class="container">
       <h3 class="title">Naples Centennial</h3>
@@ -123,7 +165,7 @@
     </div>
   
     <!--------------------------------Social Media----------------------------------------->
-    <h2 class="social-title">Find Us on Social Media</h2>
+    <h2>Find Us on Social Media</h2>
 
     <div class="socials">
       <a href="https://www.facebook.com/CityofNaplesFL/" class="fa fa-facebook"></a>

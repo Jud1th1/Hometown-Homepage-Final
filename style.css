@@ -1,9 +1,11 @@
 :root {
     --sky-blue: #caf0f8;
-    --ocean-blue: #0077b6;
+    --ocean-blue: #198ece;
     --dark-blue: #03045e;
     --yelloworange-accent: #ffd000;
     --orange-accent: #ff9770;
+    --links: #1B4678;
+    --nav: #E9ECEF;
 
     --var-main-font: font-family: 'Vollkorn', serif;
     --var-heading-font: font-family: 'Domine', script;
@@ -26,55 +28,116 @@ h1 {
   font-size: 8vw;
   letter-spacing: 1rem;
   margin: 0rem;
-  padding-bottom: 0rem;
   color: rgba(255, 255, 255, 70%);
 }
 
-.deco-title {
-  font-size: 1rem;
+h2{
+  color: #2d2d2d;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.7em 0;
+}
+
+span {
+  font-size: 2rem;
   text-transform: uppercase;
-  color: var(--ocean-blue)
+  color: var(--ocean-blue);
+}
+
+/******************************** for screen readers ********************************/
+.sr-only {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+  clip: rect(1px 1px 1px 1px);
+  /* maybe deprecated but we need to support legacy browsers */
+  clip: rect(1px, 1px, 1px, 1px);
+  /* modern browsers, clip-path works inwards from each corner */
+  clip-path: inset(50%);
+  /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+  white-space: nowrap;
+}
+
+.sr-only.sr-only-focusable:focus {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  clip-path: initial;
+  white-space: normal;
 }
 
 /******************************** nav bar ********************************/
-nav{
-    background-color: #e9ecef;
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
+nav {
+  background-color: var(--nav);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
 }
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-nav li {
-    font-weight: 100;
-    letter-spacing: 2px;
-    padding: 10px;
-    display: inline-block;
-  }
-
-nav a:link {
-color: #808080;
-text-decoration: none;
-}
-  
-
-nav a:hover {
-    color: #0077b6;
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
 
-img{
- width: 150px;
- height: 50px;
- margin-bottom: -20px;
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: var(--links);
+  padding: 0px 20px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  text-align: center;
 }
- 
+
+nav a:hover, .dropdown:hover{
+  color: var(--ocean-blue);
+}
+
+.dropbtn {
+  color: var(--nav);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--nav);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.my-logo{
+  height: 100px;
+}
+
 /******************************** Hero Image ********************************/
  .hero-image {
     background-image: url(Images/pier.jpg);
@@ -96,13 +159,6 @@ img{
   -webkit-box-sizing: border-box;
   -moz-box-sizing:border-box;
   box-sizing: border-box;
-}
-
-.main-title{
-  color: #2d2d2d;
-  text-align: center;
-  text-transform: capitalize;
-  padding: 0.7em 0;
 }
 
 .title {
@@ -207,12 +263,6 @@ img{
 
 
 /******************************** Socials ********************************/
-.social-title {
-  padding: 60px;
-  display: flex;
-  justify-content: center;
-}
-
 .socials {
   padding-bottom: 60px;
   display: flex;
