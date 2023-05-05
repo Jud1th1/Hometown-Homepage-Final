@@ -30,7 +30,7 @@ h1 {
   color: rgba(255, 255, 255, 70%);
 }
 
-h2 {
+.deco-title {
   font-size: 1rem;
   text-transform: uppercase;
   color: var(--ocean-blue)
