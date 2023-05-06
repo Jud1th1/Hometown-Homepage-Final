@@ -1,6 +1,6 @@
 :root {
     --sky-blue: #caf0f8;
-    --ocean-blue: #198ece;
+    --ocean-blue: #007BB5;
     --dark-blue: #03045e;
     --yelloworange-accent: #ffd000;
     --orange-accent: #ff9770;
@@ -38,22 +38,27 @@ h1, .h1_title{
 } 
 
 h2{
-  color: #2d2d2d;
+  color: var(--ocean-blue);
   text-align: center;
   text-transform: capitalize;
-  padding: 0.7em 0;
+  padding: 2em 0;
 }
 
+.title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
 /******************************** nav bar ********************************/
 nav {
   background-color: var(--nav);
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0 5rem;
   height: fit-content;
   position: fixed;
   width: 100vw;
+  z-index: 1;
 }
 
 .dropdown {
@@ -79,6 +84,7 @@ nav a:hover, .dropdown:hover{
 
 .dropbtn {
   color: var(--nav);
+  cursor: pointer;
 }
 
 .dropdown-content {
@@ -126,26 +132,11 @@ nav a:hover, .dropdown:hover{
   }
 
 /******************************** Menu ********************************/
-*, *:before, *:after{
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing:border-box;
-  box-sizing: border-box;
-}
-
-.title {
-  font-size: 1rem;
-}
-
-.container{
+.container {
   padding: 1em 0;
   float: left;
   width: 50%;
-}
-
-
-
+  }
 
 .container .title{
   color: #1a1a1a;
@@ -218,17 +209,22 @@ nav a:hover, .dropdown:hover{
 
 .content-details p{
   color: #fff;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .fadeIn-bottom{
   top: 80%;
 }
 
+hr{
+  width:25%;
+  border-top: 1px dotted var(--dark-blue);
+  margin: auto;
+}
 
 /******************************** Socials ********************************/
 .socials {
-  padding-bottom: 60px;
+  padding-bottom: 8em;
   display: flex;
   justify-content: center;
 }
@@ -269,18 +265,49 @@ footer {
   background-color:  #e9ecef;
   color: #808080;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   padding: 10px;
 }
 
 
 /******************************** Small Devices********************************/
 @media screen and (max-width: 640px){
- 
+  /*Nav*/
+  nav{
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    position: static;
+    padding-bottom: 2em;
+  }
 
+  nav img{
+    visibility: hidden;
+    display: none;
+  }
+
+  .dropbtn{
+    height: 0px;
+  }
+
+  /*Hero image*/
+  .hero-image{
+    height: 300px;
+  }
+
+  .title_text{
+    font-size: 1em;
+    padding: 1em;
+  }
+
+  /*Menu*/
   .container{
     display: block;
     width: 100%;
+  }
+
+  footer{
+    position: static;
   }
 }
 
