@@ -22,14 +22,20 @@ body {
     font-family: 'Domine';
 }
 
-h1 {
+h1, .h1_title{
   text-transform: uppercase;
   font-family: 'Domine';
-  font-size: 8vw;
+  font-size: 7vw;
   letter-spacing: 1rem;
   margin: 0rem;
   color: rgba(255, 255, 255, 70%);
 }
+
+.title_text {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--ocean-blue);
+} 
 
 h2{
   color: #2d2d2d;
@@ -38,49 +44,16 @@ h2{
   padding: 0.7em 0;
 }
 
-span {
-  font-size: 2rem;
-  text-transform: uppercase;
-  color: var(--ocean-blue);
-}
-
-/******************************** for screen readers ********************************/
-.sr-only {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-  clip: rect(1px 1px 1px 1px);
-  /* maybe deprecated but we need to support legacy browsers */
-  clip: rect(1px, 1px, 1px, 1px);
-  /* modern browsers, clip-path works inwards from each corner */
-  clip-path: inset(50%);
-  /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
-  white-space: nowrap;
-}
-
-.sr-only.sr-only-focusable:focus {
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
-  clip-path: initial;
-  white-space: normal;
-}
-
 /******************************** nav bar ********************************/
 nav {
   background-color: var(--nav);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  padding: 0 5rem;
   height: fit-content;
+  position: fixed;
+  width: 100vw;
 }
 
 .dropdown {
@@ -170,18 +143,9 @@ nav a:hover, .dropdown:hover{
   float: left;
   width: 50%;
 }
-@media screen and (max-width: 640px){
-  .container{
-    display: block;
-    width: 100%;
-  }
-}
 
-@media screen and (min-width: 900px){
-  .container{
-    width: 33.33333%;
-  }
-}
+
+
 
 .container .title{
   color: #1a1a1a;
@@ -307,4 +271,23 @@ footer {
   text-align: center;
   font-size: 10px;
   padding: 10px;
+}
+
+
+/******************************** Small Devices********************************/
+@media screen and (max-width: 640px){
+ 
+
+  .container{
+    display: block;
+    width: 100%;
+  }
+}
+
+
+/******************************** Large Devices********************************/
+@media screen and (min-width: 900px){
+  .container{
+    width: 33.33333%;
+  }
 }

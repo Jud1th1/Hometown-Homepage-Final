@@ -12,10 +12,6 @@
 <title>Document</title>
 </head>
 <body>
-    <!------------- For screenreaders/keyboard users (Skip Nav) --------------------->
-    <a href="#start-of-content" class="sr-only sr-only-focusable">
-      Skip to content
-    </a>
     
     <!----======================= Nav Bar ==========================------>
     <nav>
@@ -71,13 +67,14 @@
         </div>
     </nav>
 
-    <div id="start-of-content" class="sr-only"></div>
-    <!--------------------------------Hero Image----------------------------------------->
+     <!--========================================= Hero Image ===========================================-->
     <div class="hero-image">
-    <h1>Welcome to<br><span> -------------- the City Of -------------- </span><br>Naples</h1>
+      <h1>Welcome to</h1>
+      <p class="title_text">-------------- the City Of --------------</p>
+      <p class="h1_title">Naples</p>
     </div>
 
-    <!--------------------------------Icons & Text----------------------------------------->
+     <!--========================================= Menu ===========================================-->
     <h2>What's Happening In Our Community?</h2>
 
     <div class="container">
@@ -164,7 +161,7 @@
       </div>
     </div>
   
-    <!--------------------------------Social Media----------------------------------------->
+    <!--========================================= Social Media ===========================================-->
     <h2>Find Us on Social Media</h2>
 
     <div class="socials">
@@ -173,11 +170,22 @@
       <a href="https://www.linkedin.com/company/city-of-naples/" class="fa fa-linkedin"></a>
     </div>
 
-    <!-------------------------------- Footer ----------------------------------------->   
+    <!--========================================= Footer ===========================================-->
      <footer>
         <p>735 8th Street South, Naples, Florida 34102</p>
         <p>Designed by Judith Jean-Francois</p>
+        <br>
+        <p>Translate this page:</p>
+        <div id="google_translate_element"></div>
      </footer>
 
+     <!--=================================== Javascript for translation =========================================-->
+     <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+      </script>
+      
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
