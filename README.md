@@ -80,13 +80,13 @@ Accessibility updates
     // Current Naples website 
 -   https://www.naplesgov.com/     
 
-    //My Figma files: 
+    // My Figma files: 
 -    https://www.figma.com/file/x5ht5VS7FsNOLjmfo9r64r/Hometown-Homepage?type=design&node-id=1%3A2&t=PSIjLcBNWhfJCKod-1
 
     //How I check for accessibility
 -   https://accessibe.com/    
 -   https://www.a11yproject.com/checklist/
 
-    //Helpful tutorials
+    // Helpful tutorials
 -   https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp    //for dropdown navigation
 -   https://www.w3schools.com/howto/howto_google_translate.asp      //for Google translation feature
